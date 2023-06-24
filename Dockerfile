@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080
 
 # Ejecutar el servidor WSGI utilizando Waitress
-CMD ["waitress-serve", "--listen=0.0.0.0:8080", "app:app"]
+CMD ["waitress-serve", "--listen=0.0.0.0:8080", "app:views"]

@@ -9,6 +9,8 @@ def get_image_size(file_path):
         raise Exception(f"No se pudo obtener el tamaño del archivo: {file_path}")
 
 def save_image_from_base64(image_data, image_path):
+    if not os.path.isdir('data/'):
+        os.mkdir('data/')
     with open(image_path, 'wb') as file:
         file.write(base64.b64decode(image_data))
 

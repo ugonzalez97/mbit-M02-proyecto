@@ -5,10 +5,10 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${DB_NAME}
-      MYSQL_USER: ${DB_USER}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Pictures
+      MYSQL_USER: mbit
+      MYSQL_PASSWORD: mbit
     volumes:
       - db_data:/var/lib/mysql
 
@@ -21,9 +21,9 @@ services:
     environment:
       DB_HOST: db
       DB_PORT: 3306
-      DB_NAME: ${DB_NAME}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: Pictures
+      DB_USER: mbit
+      DB_PASSWORD: mbit
 
 volumes:
   db_data:
